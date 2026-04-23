@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#0D1118"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="280" y="230" width="300" height="430" rx="24" fill="#141C2B" stroke="#D19A29" stroke-width="4"/>
+  <rect x="1020" y="230" width="300" height="430" rx="24" fill="#141C2B" stroke="#D19A29" stroke-width="4"/>
+  <path d="M430 520c0-58 45-103 103-103h35v137c0 58-45 103-103 103h-35V520Z" fill="#D19A29" fill-opacity=".18"/>
+  <rect x="1080" y="318" width="180" height="238" rx="22" fill="#1F3A40"/>
+  <path d="M670 444h260" stroke="#D19A29" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 22"/>
+  <path d="M870 414l60 30-60 30" stroke="#D19A29" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="300" fill="#E7E5E1" font-size="40" font-family="Oswald, Arial Narrow, sans-serif">WHIRLFLOC</text>
+  <text x="1060" y="300" fill="#E7E5E1" font-size="40" font-family="Oswald, Arial Narrow, sans-serif">CLAREX</text>
+  <text x="130" y="130" fill="#D19A29" font-size="28" font-family="Inter, Arial, sans-serif" letter-spacing="4">KLARINGSMIDLER</text>
+  <text x="130" y="790" fill="#E7E5E1" font-size="82" font-family="Oswald, Arial Narrow, sans-serif">TO VERKTØY. TO FORSKJELLIGE JOBBER.</text>
+  <text x="132" y="840" fill="#E7E5E1" fill-opacity=".72" font-size="28" font-family="Inter, Arial, sans-serif">Samme mål: renere øl og mindre haze.</text>
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101521"/>
+      <stop offset="1" stop-color="#0A0F17"/>
+    </linearGradient>
+  </defs>
+</svg>

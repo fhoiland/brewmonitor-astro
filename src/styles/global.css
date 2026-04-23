@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", sans-serif;
+  --font-headline: "Oswald", sans-serif;
+  --brew-dark: #0d1118;
+  --brew-dark-soft: #141c2b;
+  --brew-card: rgba(20, 28, 43, 0.84);
+  --brew-card-strong: rgba(10, 17, 24, 0.96);
+  --brew-amber: #d19a29;
+  --brew-amber-light: #ebb458;
+  --brew-amber-soft: rgba(209, 154, 41, 0.14);
+  --brew-text: #e7e5e1;
+  --brew-text-muted: rgba(231, 229, 225, 0.72);
+  --brew-border: rgba(209, 154, 41, 0.18);
+  --brew-red: #d97f55;
+  --brew-green: #1f3a40;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(209, 154, 41, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(31, 58, 64, 0.14), transparent 24%),
+    linear-gradient(180deg, #0d1118 0%, #101521 52%, #0a0f17 100%);
+  color: var(--brew-text);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: hsla(35 95% 59% / 0.32);
+  color: var(--brew-text);
+}
+
+.page-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(209, 154, 41, 0.1), transparent 24%),
+    radial-gradient(circle at 85% 10%, rgba(31, 58, 64, 0.12), transparent 20%),
+    radial-gradient(circle at 50% 100%, rgba(209, 154, 41, 0.06), transparent 35%);
+}
+
+.container-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.font-headline {
+  font-family: var(--font-headline);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.glass-card {
+  background:
+    linear-gradient(180deg, rgba(20, 28, 43, 0.96), rgba(11, 18, 27, 0.92));
+  border: 1px solid var(--brew-border);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(14px);
+}
+
+.hero-panel {
+  background:
+    linear-gradient(135deg, rgba(209, 154, 41, 0.12), transparent 35%),
+    linear-gradient(180deg, rgba(20, 28, 43, 0.92), rgba(11, 18, 27, 0.8));
+  border: 1px solid var(--brew-border);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+}
+
+.metric-card {
+  background:
+    linear-gradient(180deg, rgba(20, 28, 43, 0.96), rgba(11, 18, 27, 0.9));
+  border: 1px solid var(--brew-border);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid hsla(35 95% 59% / 0.2);
+  background-color: var(--brew-amber-soft);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--brew-amber);
+}
+
+.brand-highlight {
+  color: var(--brew-amber);
+}
+
+.brand-divider {
+  color: rgba(209, 154, 41, 0.45);
+}
+
+.prose-brew {
+  color: var(--brew-text-muted);
+  line-height: 1.9;
+}
+
+.prose-brew h2,
+.prose-brew h3 {
+  color: var(--brew-text);
+  font-family: var(--font-headline);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-brew p,
+.prose-brew ul {
+  margin-bottom: 1rem;
+}
+
+.prose-brew a {
+  color: var(--brew-amber-light);
+}

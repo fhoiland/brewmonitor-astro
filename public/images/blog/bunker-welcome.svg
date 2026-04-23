@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#0D1118"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M120 760V390C120 228 251 96 413 96h774c162 0 293 132 293 294v370" stroke="#D19A29" stroke-width="10" stroke-linecap="round"/>
+  <rect x="220" y="250" width="1160" height="470" rx="18" fill="#141C2B" stroke="rgba(209,154,41,.2)"/>
+  <rect x="280" y="300" width="150" height="360" rx="20" fill="#1F3A40"/>
+  <rect x="470" y="330" width="160" height="330" rx="20" fill="#101521"/>
+  <rect x="680" y="280" width="170" height="380" rx="20" fill="#1F3A40"/>
+  <rect x="910" y="320" width="170" height="340" rx="20" fill="#101521"/>
+  <rect x="1130" y="290" width="180" height="370" rx="20" fill="#1F3A40"/>
+  <circle cx="355" cy="705" r="55" fill="#D19A29" fill-opacity=".12" stroke="#D19A29"/>
+  <circle cx="570" cy="705" r="55" fill="#D19A29" fill-opacity=".12" stroke="#D19A29"/>
+  <circle cx="765" cy="705" r="55" fill="#D19A29" fill-opacity=".12" stroke="#D19A29"/>
+  <circle cx="996" cy="705" r="55" fill="#D19A29" fill-opacity=".12" stroke="#D19A29"/>
+  <circle cx="1220" cy="705" r="55" fill="#D19A29" fill-opacity=".12" stroke="#D19A29"/>
+  <text x="130" y="130" fill="#D19A29" font-size="28" font-family="Inter, Arial, sans-serif" letter-spacing="4">VELKOMMEN TIL BUNKER BREW</text>
+  <text x="130" y="820" fill="#E7E5E1" font-size="78" font-family="Oswald, Arial Narrow, sans-serif" letter-spacing="2">ØL FRA ET BOMBEROM</text>
+  <text x="132" y="860" fill="#E7E5E1" fill-opacity=".72" font-size="26" font-family="Inter, Arial, sans-serif">Rå betong, varme tanker og nysgjerrighet i hver batch.</text>
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101521"/>
+      <stop offset="1" stop-color="#0A0F17"/>
+    </linearGradient>
+  </defs>
+</svg>

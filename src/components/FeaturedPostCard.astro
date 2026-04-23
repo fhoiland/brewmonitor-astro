@@ -1,0 +1,64 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  summary: string;
+  pubDate: Date;
+  category?: string;
+  image?: string;
+  aspect?: "video" | "square";
+}
+
+const { href, title, summary, pubDate, category = "Bryggelogg", image, aspect = "video" } = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString("nb-NO", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+});
+
+const aspectClass = aspect === "square" ? "aspect-square" : "aspect-video";
+---
+
+<article class="group cursor-pointer">
+  <div class:list={["relative overflow-hidden rounded-[1.4rem] border border-brew-border bg-white/5 transition duration-300 hover:-translate-y-1 hover:border-brew-amber/40", aspectClass]}>
+    <a href={href}>
+      {image ? (
+        <img
+          src={image}
+          alt={title}
+          class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+      ) : (
+        <div class="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(209,154,41,0.26),_transparent_35%),linear-gradient(180deg,rgba(20,28,43,0.85),rgba(10,15,23,1))]" />
+      )}
+      <div class="absolute inset-0 bg-gradient-to-t from-brew-dark via-brew-dark/10 to-transparent" />
+    </a>
+  </div>
+
+  <div class="mt-5">
+    <span class="inline-block text-[11px] font-semibold uppercase tracking-[0.24em] text-brew-amber">
+      {category}
+    </span>
+    <h2 class="mt-2 font-headline text-[1.7rem] font-semibold leading-[1.05] text-brew-text sm:text-[1.95rem]">
+      <a href={href}>
+        <span class="bg-[linear-gradient(to_right,rgba(209,154,41,0.24),rgba(235,180,88,0.16))] bg-[length:0px_12px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_12px]">
+          {title}
+        </span>
+      </a>
+    </h2>
+    <p class="mt-3 text-sm leading-7 text-brew-text-muted">
+      {summary}
+    </p>
+
+    <div class="mt-4 flex items-center gap-3 text-sm text-brew-text-muted">
+      <div class="flex h-6 w-6 items-center justify-center rounded-full bg-brew-amber-soft text-[11px] font-semibold text-brew-amber">
+        BB
+      </div>
+      <span>Bunker Brew</span>
+      <span class="brand-divider">•</span>
+      <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+    </div>
+  </div>
+</article>

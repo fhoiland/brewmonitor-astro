@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#0D1118"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="310" y="220" width="240" height="410" rx="26" fill="#141C2B" stroke="#D19A29" stroke-width="4"/>
+  <rect x="1030" y="220" width="240" height="410" rx="26" fill="#141C2B" stroke="#D19A29" stroke-width="4"/>
+  <circle cx="430" cy="662" r="54" fill="#D19A29" fill-opacity=".12" stroke="#D19A29"/>
+  <circle cx="1150" cy="662" r="54" fill="#D19A29" fill-opacity=".12" stroke="#D19A29"/>
+  <path d="M550 330c130 0 160 20 210 90 38 54 113 67 270 67" stroke="#E7E5E1" stroke-width="14" stroke-linecap="round"/>
+  <path d="M972 460l68 27-60 41" stroke="#D19A29" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="665" y="295" width="135" height="70" rx="20" fill="#1F3A40"/>
+  <text x="706" y="340" fill="#D19A29" font-size="30" font-family="Inter, Arial, sans-serif">0.3 bar</text>
+  <text x="130" y="130" fill="#D19A29" font-size="28" font-family="Inter, Arial, sans-serif" letter-spacing="4">OVERFØRING TIL FAT</text>
+  <text x="130" y="790" fill="#E7E5E1" font-size="82" font-family="Oswald, Arial Narrow, sans-serif">ROLIG FLYT GIR RENERE ØL</text>
+  <text x="132" y="840" fill="#E7E5E1" fill-opacity=".72" font-size="28" font-family="Inter, Arial, sans-serif">Lavt trykk, kontrollert avlufting og minst mulig uro i systemet.</text>
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101521"/>
+      <stop offset="1" stop-color="#0A0F17"/>
+    </linearGradient>
+  </defs>
+</svg>

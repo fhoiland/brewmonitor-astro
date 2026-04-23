@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#0D1118"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="520" cy="350" r="92" fill="#D19A29" fill-opacity=".1" stroke="#D19A29" stroke-width="4"/>
+  <circle cx="980" cy="350" r="92" fill="#D19A29" fill-opacity=".1" stroke="#D19A29" stroke-width="4"/>
+  <path d="M430 610c0-72 58-130 130-130h0c72 0 130 58 130 130v40H430v-40Z" fill="#141C2B" stroke="#D19A29" stroke-width="3"/>
+  <path d="M890 610c0-72 58-130 130-130h0c72 0 130 58 130 130v40H890v-40Z" fill="#141C2B" stroke="#D19A29" stroke-width="3"/>
+  <rect x="705" y="470" width="190" height="130" rx="18" fill="#1F3A40" stroke="rgba(209,154,41,.25)"/>
+  <path d="M800 500v62" stroke="#D19A29" stroke-width="8" stroke-linecap="round"/>
+  <path d="M764 534h72" stroke="#D19A29" stroke-width="8" stroke-linecap="round"/>
+  <text x="130" y="130" fill="#D19A29" font-size="28" font-family="Inter, Arial, sans-serif" letter-spacing="4">OM OSS</text>
+  <text x="130" y="790" fill="#E7E5E1" font-size="82" font-family="Oswald, Arial Narrow, sans-serif">TO KARER. ETT BRYGGEPROSJEKT.</text>
+  <text x="132" y="840" fill="#E7E5E1" fill-opacity=".72" font-size="28" font-family="Inter, Arial, sans-serif">Nysgjerrighet, forbedring og mer bryggeprat enn strengt tatt nødvendig.</text>
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101521"/>
+      <stop offset="1" stop-color="#0A0F17"/>
+    </linearGradient>
+  </defs>
+</svg>

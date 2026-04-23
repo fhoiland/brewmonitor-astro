@@ -1,0 +1,75 @@
+---
+import "../styles/global.css";
+import { site } from "../data/site";
+import BrandMark from "./BrandMark.astro";
+import NavLink from "./NavLink.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = site.name, description = site.description } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body>
+    <div class="page-shell min-h-screen text-brew-text">
+      <nav class="sticky top-0 z-50 border-b border-brew-border bg-brew-dark/70 backdrop-blur-xl">
+        <div class="container-shell py-4">
+          <div class="flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-4">
+              <BrandMark />
+              <div class="border-l border-brew-border pl-4">
+                <span class="block font-headline text-[2rem] font-bold leading-none text-brew-text sm:text-[2.35rem]">
+                  {site.name}
+                </span>
+                <p class="mt-1 hidden text-[0.58rem] uppercase tracking-[0.38em] text-brew-text-muted sm:block">
+                  To karer. <span class="brand-highlight">Ett brygg av gangen.</span>
+                </p>
+              </div>
+            </a>
+
+            <div class="flex items-center gap-2 rounded-full border border-brew-border bg-brew-card/70 p-1.5">
+              <NavLink href="/blog" label="Blogg" currentPath={currentPath} />
+              <NavLink href="/about" label="Om oss" currentPath={currentPath} />
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <slot />
+
+      <footer class="mt-16 border-t border-brew-border">
+        <div class="container-shell py-8">
+          <div class="flex flex-col gap-6 rounded-[1.75rem] border border-brew-border bg-brew-card/40 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
+            <div class="flex items-center gap-3">
+              <BrandMark size="sm" />
+              <div class="border-l border-brew-border pl-3">
+                <p class="font-headline text-[1.35rem] font-bold leading-none text-brew-text">{site.name}</p>
+                <p class="mt-1 text-[0.62rem] uppercase tracking-[0.35em] text-brew-text-muted">
+                  To karer. <span class="brand-highlight">Ett brygg av gangen.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4 text-sm text-brew-text-muted">
+              <a href="/" class="hover:text-brew-amber">Hjem</a>
+              <a href="/blog" class="hover:text-brew-amber">Blogg</a>
+              <a href="/about" class="hover:text-brew-amber">Om oss</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

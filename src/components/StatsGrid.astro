@@ -1,0 +1,21 @@
+---
+import { brewStatus } from "../data/site";
+---
+
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+  {brewStatus.stats.map((item) => (
+    <div class="metric-card rounded-[1.75rem] p-6">
+      <div class="mb-8 flex items-center justify-between">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brew-amber-soft text-brew-amber">
+          <span class="font-headline text-lg font-bold">{item.value.slice(0, 1)}</span>
+        </div>
+        <span class="rounded-full border border-brew-border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-brew-text-muted">
+          {item.tone}
+        </span>
+      </div>
+
+      <div class="font-headline text-4xl font-bold text-brew-text">{item.value}</div>
+      <div class="mt-3 text-sm text-brew-text-muted">{item.label}</div>
+    </div>
+  ))}
+</div>

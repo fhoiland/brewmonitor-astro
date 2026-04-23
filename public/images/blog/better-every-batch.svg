@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#0D1118"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M260 650c120-100 220-150 330-150 95 0 184 31 262 31 86 0 172-34 265-112 46-39 121-105 221-199" stroke="#E7E5E1" stroke-opacity=".25" stroke-width="14" stroke-linecap="round"/>
+  <path d="M260 650c120-100 220-150 330-150 95 0 184 31 262 31 86 0 172-34 265-112 46-39 121-105 221-199" stroke="#D19A29" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="260" cy="650" r="22" fill="#D19A29"/>
+  <circle cx="590" cy="500" r="22" fill="#D19A29"/>
+  <circle cx="852" cy="531" r="22" fill="#D19A29"/>
+  <circle cx="1117" cy="419" r="22" fill="#D19A29"/>
+  <circle cx="1338" cy="220" r="22" fill="#D19A29"/>
+  <rect x="210" y="235" width="240" height="110" rx="22" fill="#141C2B" stroke="rgba(209,154,41,.2)"/>
+  <rect x="510" y="195" width="240" height="110" rx="22" fill="#141C2B" stroke="rgba(209,154,41,.2)"/>
+  <rect x="810" y="155" width="240" height="110" rx="22" fill="#141C2B" stroke="rgba(209,154,41,.2)"/>
+  <text x="130" y="130" fill="#D19A29" font-size="28" font-family="Inter, Arial, sans-serif" letter-spacing="4">REISEN VÅR</text>
+  <text x="130" y="790" fill="#E7E5E1" font-size="82" font-family="Oswald, Arial Narrow, sans-serif">HVER BATCH SKAL LÆRE OSS NOE</text>
+  <text x="132" y="840" fill="#E7E5E1" fill-opacity=".72" font-size="28" font-family="Inter, Arial, sans-serif">Små forbedringer over tid gir merkbart bedre øl.</text>
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101521"/>
+      <stop offset="1" stop-color="#0A0F17"/>
+    </linearGradient>
+  </defs>
+</svg>

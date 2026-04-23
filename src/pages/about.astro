@@ -1,0 +1,61 @@
+---
+import Layout from "../components/Layout.astro";
+import { site } from "../data/site";
+---
+
+<Layout title="Om oss | Bunker Brew" description="Litt om folka bak Bunker Brew og hva vi prøver å bygge.">
+  <main class="container-shell py-8 sm:py-10">
+    <section class="max-w-4xl">
+      <h1 class="font-headline text-4xl font-bold text-brew-text sm:text-5xl">Om oss</h1>
+      <p class="mt-4 max-w-3xl text-base leading-8 text-brew-text-muted">
+        <span class="brand-highlight">Bunker Brew</span> er to karer, en god dose nysgjerrighet og en felles interesse for øl som er litt bedre enn det som bare funker.
+      </p>
+    </section>
+
+    <section class="mt-8 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+      <div class="glass-card rounded-[2rem] p-8">
+        <div class="space-y-5 text-base leading-8 text-brew-text-muted">
+          <p>
+            Bunker Brew startet med en ganske enkel idé: å brygge øl vi selv faktisk har lyst til å drikke. Ikke bare noe som er helt greit, men øl som er rent, gjennomtenkt og stadig litt bedre enn forrige batch.
+          </p>
+          <p>
+            Vi brygger i et bomberom, og det setter naturligvis sitt preg på hele prosjektet. Det er noe med kombinasjonen av betong, teknisk nysgjerrighet og gjæringskar som bare føles riktig. Det er ikke fancy, det er ikke polert, men det er ekte.
+          </p>
+          <p>
+            Bak Bunker Brew finner du Fredrik og Thomas, to kollegaer med sans for godt håndverk, tekniske løsninger og hjemmebrygging som hobby med stadig høyere ambisjoner.
+          </p>
+          <p>
+            Vi brygger fordi det er gøy, men også fordi det er noe eget med å bygge opp noe fra bunnen av og hele tiden jage små forbedringer. Oppskrift, prosess, temperatur, klarhet, overføring og karbonering henger sammen, og jo mer man lærer, jo mer skjønner man hvor mange detaljer som faktisk betyr noe.
+          </p>
+          <p>
+            Noen batcher sitter med en gang. Andre lærer du mer av. Andre ganger kaller vi det bare en spennende variant og later som det var planen hele tiden.
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="glass-card rounded-[2rem] p-8">
+          <h2 class="font-headline text-2xl font-bold text-brew-text">Hva vi prøver å bygge</h2>
+          <div class="mt-4 space-y-4 text-sm leading-7 text-brew-text-muted">
+            <p>Et enkelt sted for batchlogger, bryggedager og erfaringer underveis.</p>
+            <p>En blogg som dokumenterer både det som funker og det som ikke gjør det.</p>
+            <p>Et prosjekt som holder det <span class="brand-highlight">rent, robust og nyttig</span>.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-[2rem] p-8">
+          <h2 class="font-headline text-2xl font-bold text-brew-text">Kontakt</h2>
+          <p class="mt-4 text-sm leading-7 text-brew-text-muted">
+            Vil du ta kontakt, kan du sende en e-post til oss.
+          </p>
+          <a
+            href={`mailto:${site.email}`}
+            class="mt-6 inline-flex items-center justify-center rounded-full bg-brew-amber px-6 py-3 text-sm font-semibold text-brew-dark transition hover:bg-brew-amber-light"
+          >
+            {site.email}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+import FeaturedPostCard from "../components/FeaturedPostCard.astro";
+import Layout from "../components/Layout.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+const featuredPosts = posts.slice(0, 2);
+const morePosts = posts.slice(2, 5);
+---
+
+<Layout title="Bunker Brew" description="Underground beer. Built simple. Blogg med batcher, bryggedager og notater.">
+  <main class="container-shell py-8 sm:py-10">
+    <section class="grid gap-10 md:grid-cols-2">
+      {featuredPosts.map((post) => (
+        <FeaturedPostCard
+          href={`/blog/${post.slug}/`}
+          title={post.data.title}
+          summary={post.data.summary}
+          pubDate={post.data.pubDate}
+          category={post.data.category}
+          image={post.data.image}
+          aspect="video"
+        />
+      ))}
+    </section>
+
+    {morePosts.length > 0 ? (
+      <section class="mt-10">
+        <div class="grid gap-10 sm:grid-cols-2 xl:grid-cols-3">
+          {morePosts.map((post) => (
+            <FeaturedPostCard
+              href={`/blog/${post.slug}/`}
+              title={post.data.title}
+              summary={post.data.summary}
+              pubDate={post.data.pubDate}
+              category={post.data.category}
+              image={post.data.image}
+              aspect="square"
+            />
+          ))}
+        </div>
+      </section>
+    ) : null}
+  </main>
+</Layout>

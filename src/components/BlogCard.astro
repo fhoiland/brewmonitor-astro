@@ -1,0 +1,56 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  summary: string;
+  pubDate: Date;
+  category?: string;
+  image?: string;
+}
+
+const { href, title, summary, pubDate, category = "Bryggelogg", image } = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString("nb-NO", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<a
+  href={href}
+  class="glass-card group flex h-full flex-col overflow-hidden rounded-[2rem] transition duration-300 hover:-translate-y-1"
+>
+  <div class="relative h-52 overflow-hidden border-b border-brew-border">
+    {image ? (
+      <img
+        src={image}
+        alt={title}
+        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+        loading="lazy"
+      />
+    ) : (
+      <div class="flex h-full items-end bg-[radial-gradient(circle_at_top,_rgba(209,154,41,0.28),_transparent_35%),linear-gradient(180deg,rgba(20,28,43,0.8),rgba(10,15,23,1))] p-6">
+        <span class="section-kicker">{category}</span>
+      </div>
+    )}
+    {image ? <div class="absolute inset-0 bg-gradient-to-t from-brew-dark via-brew-dark/20 to-transparent" /> : null}
+    {image ? <div class="absolute left-5 top-5"><span class="section-kicker">{category}</span></div> : null}
+  </div>
+
+  <div class="flex flex-1 flex-col p-6">
+    <div class="mb-4 flex items-center gap-3 text-sm text-brew-text-muted">
+      <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brew-amber-soft text-[11px] font-semibold text-brew-amber">BB</span>
+      <span>{formattedDate}</span>
+    </div>
+    <h3 class="mb-3 font-headline text-[1.85rem] font-semibold leading-[1.04] text-brew-text">{title}</h3>
+    <p class="mb-6 flex-1 text-sm leading-7 text-brew-text-muted">{summary}</p>
+
+    <div class="flex items-center justify-between border-t border-brew-border pt-4">
+      <span class="text-sm font-semibold text-brew-text">Les innlegget</span>
+      <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brew-border text-brew-amber">
+        →
+      </span>
+    </div>
+  </div>
+</a>

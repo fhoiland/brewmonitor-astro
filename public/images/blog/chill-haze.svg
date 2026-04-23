@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#0D1118"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M420 220h140l-22 400c-3 38-33 68-71 68h-4c-38 0-68-30-71-68l-22-400h50Z" fill="#141C2B" stroke="#E7E5E1" stroke-width="8"/>
+  <path d="M420 220h140" stroke="#E7E5E1" stroke-width="8" stroke-linecap="round"/>
+  <path d="M444 360c40-18 58 20 89 8 14-6 29-6 42 4v230c0 23-19 42-42 42h-85c-23 0-42-19-42-42V380c9-9 23-16 38-20Z" fill="#D19A29" fill-opacity=".18"/>
+  <path d="M1040 220h140l-22 400c-3 38-33 68-71 68h-4c-38 0-68-30-71-68l-22-400h50Z" fill="#141C2B" stroke="#E7E5E1" stroke-width="8"/>
+  <path d="M1040 220h140" stroke="#E7E5E1" stroke-width="8" stroke-linecap="round"/>
+  <rect x="1026" y="364" width="168" height="282" rx="44" fill="#D19A29" fill-opacity=".6"/>
+  <circle cx="800" cy="450" r="120" fill="#1F3A40" fill-opacity=".5" stroke="rgba(209,154,41,.25)" stroke-width="4"/>
+  <path d="M760 500c14-60 66-116 108-138" stroke="#D19A29" stroke-width="8" stroke-linecap="round"/>
+  <path d="M719 540c31-11 48-13 82-10" stroke="#D19A29" stroke-width="8" stroke-linecap="round"/>
+  <text x="130" y="130" fill="#D19A29" font-size="28" font-family="Inter, Arial, sans-serif" letter-spacing="4">CHILL HAZE</text>
+  <text x="130" y="790" fill="#E7E5E1" font-size="82" font-family="Oswald, Arial Narrow, sans-serif">NÅR ØLET BLIR KALDT, VISER DET ALT</text>
+  <text x="132" y="840" fill="#E7E5E1" fill-opacity=".72" font-size="28" font-family="Inter, Arial, sans-serif">Forskjellen mellom rent og disig blir tydelig i glasset.</text>
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101521"/>
+      <stop offset="1" stop-color="#0A0F17"/>
+    </linearGradient>
+  </defs>
+</svg>
