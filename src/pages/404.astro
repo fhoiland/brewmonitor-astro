@@ -1,0 +1,56 @@
+---
+import Layout from "../components/Layout.astro";
+import { withBase } from "../utils/paths";
+
+const homeHref = withBase("/");
+const blogHref = withBase("/blog");
+---
+
+<Layout title="404 | Bunker Brew" description="Siden du leter etter har stukket av fra gjæringskaret.">
+  <main class="container-shell py-10 sm:py-14">
+    <section class="hero-panel mx-auto max-w-5xl rounded-[2rem] px-6 py-10 sm:px-8 sm:py-12">
+      <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div>
+          <span class="section-kicker">Feil 404</span>
+          <p class="mt-5 font-headline text-7xl leading-none text-brew-amber sm:text-8xl">404</p>
+          <h1 class="mt-4 font-headline text-4xl font-bold leading-tight text-brew-text sm:text-5xl">
+            Denne siden har tydeligvis stukket av fra gjæringskaret.
+          </h1>
+          <p class="mt-5 max-w-2xl text-base leading-8 text-brew-text-muted">
+            Vi fant ikke siden du prøvde å åpne. Enten er lenken gammel, eller så tok den en omvei via
+            humlelageret og kom aldri tilbake.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href={homeHref}
+              class="inline-flex items-center justify-center rounded-full bg-brew-amber px-6 py-3 text-sm font-semibold text-brew-dark transition hover:bg-brew-amber-light"
+            >
+              Til forsiden
+            </a>
+            <a
+              href={blogHref}
+              class="inline-flex items-center justify-center rounded-full border border-brew-border bg-white/5 px-6 py-3 text-sm font-semibold text-brew-text transition hover:border-brew-amber/50 hover:text-brew-amber"
+            >
+              Les bloggen
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-[2rem] p-6 sm:p-7">
+          <p class="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brew-amber">
+            Bryggenotat
+          </p>
+          <h2 class="mt-3 font-headline text-2xl font-bold text-brew-text">
+            Feilsoking, Bunker Brew-stil
+          </h2>
+          <div class="mt-5 space-y-4 text-sm leading-7 text-brew-text-muted">
+            <p>1. Sjekk om du traff feil lenke. Det skjer selv uten prøvesmaking.</p>
+            <p>2. Gå til bloggen. Der er i hvert fall innholdet fortsatt på fat.</p>
+            <p>3. Hvis du fortsatt er lost: kall det en eksperimentell batch og prøv igjen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
