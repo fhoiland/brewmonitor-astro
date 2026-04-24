@@ -1,4 +1,6 @@
 ---
+import { withBase } from "../utils/paths";
+
 interface Props {
   href: string;
   title: string;
@@ -9,6 +11,8 @@ interface Props {
 }
 
 const { href, title, summary, pubDate, category = "Bryggelogg", image } = Astro.props;
+const actualHref = withBase(href);
+const imageSrc = image ? withBase(image) : undefined;
 
 const formattedDate = pubDate.toLocaleDateString("nb-NO", {
   year: "numeric",
@@ -18,13 +22,13 @@ const formattedDate = pubDate.toLocaleDateString("nb-NO", {
 ---
 
 <a
-  href={href}
+  href={actualHref}
   class="glass-card group flex h-full flex-col overflow-hidden rounded-[2rem] transition duration-300 hover:-translate-y-1"
 >
   <div class="relative h-52 overflow-hidden border-b border-brew-border">
-    {image ? (
+    {imageSrc ? (
       <img
-        src={image}
+        src={imageSrc}
         alt={title}
         class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         loading="lazy"
@@ -34,8 +38,8 @@ const formattedDate = pubDate.toLocaleDateString("nb-NO", {
         <span class="section-kicker">{category}</span>
       </div>
     )}
-    {image ? <div class="absolute inset-0 bg-gradient-to-t from-brew-dark via-brew-dark/20 to-transparent" /> : null}
-    {image ? <div class="absolute left-5 top-5"><span class="section-kicker">{category}</span></div> : null}
+    {imageSrc ? <div class="absolute inset-0 bg-gradient-to-t from-brew-dark via-brew-dark/20 to-transparent" /> : null}
+    {imageSrc ? <div class="absolute left-5 top-5"><span class="section-kicker">{category}</span></div> : null}
   </div>
 
   <div class="flex flex-1 flex-col p-6">

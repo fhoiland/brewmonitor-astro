@@ -1,4 +1,6 @@
 ---
+import { withBase } from "../utils/paths";
+
 interface Props {
   href: string;
   title: string;
@@ -10,6 +12,8 @@ interface Props {
 }
 
 const { href, title, summary, pubDate, category = "Bryggelogg", image, aspect = "video" } = Astro.props;
+const actualHref = withBase(href);
+const imageSrc = image ? withBase(image) : undefined;
 
 const formattedDate = pubDate.toLocaleDateString("nb-NO", {
   year: "numeric",
@@ -22,10 +26,10 @@ const aspectClass = aspect === "square" ? "aspect-square" : "aspect-video";
 
 <article class="group cursor-pointer">
   <div class:list={["relative overflow-hidden rounded-[1.4rem] border border-brew-border bg-white/5 transition duration-300 hover:-translate-y-1 hover:border-brew-amber/40", aspectClass]}>
-    <a href={href}>
-      {image ? (
+    <a href={actualHref}>
+      {imageSrc ? (
         <img
-          src={image}
+          src={imageSrc}
           alt={title}
           class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           loading="lazy"
@@ -42,7 +46,7 @@ const aspectClass = aspect === "square" ? "aspect-square" : "aspect-video";
       {category}
     </span>
     <h2 class="mt-2 font-headline text-[1.7rem] font-semibold leading-[1.05] text-brew-text sm:text-[1.95rem]">
-      <a href={href}>
+      <a href={actualHref}>
         <span class="bg-[linear-gradient(to_right,rgba(209,154,41,0.24),rgba(235,180,88,0.16))] bg-[length:0px_12px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_12px]">
           {title}
         </span>

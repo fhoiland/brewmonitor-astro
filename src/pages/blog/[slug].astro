@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import Layout from "../../components/Layout.astro";
+import { withBase } from "../../utils/paths";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -35,7 +36,7 @@ const formattedDate = post.data.pubDate.toLocaleDateString("nb-NO", {
       {post.data.image ? (
         <figure class="mt-8">
           <img
-            src={post.data.image}
+            src={withBase(post.data.image)}
             alt={post.data.title}
             class="h-[24rem] w-full rounded-[2rem] border border-brew-border object-cover"
           />
