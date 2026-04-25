@@ -194,6 +194,16 @@ summary:focus-visible,
   margin-bottom: 1.35rem;
 }
 
+.prose-brew p:has(img) {
+  margin: 2.1rem 0;
+}
+
+.prose-brew img {
+  width: 100%;
+  border-radius: 1.4rem;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.22);
+}
+
 .prose-brew ul,
 .prose-brew ol {
   padding-left: 1.3rem;
