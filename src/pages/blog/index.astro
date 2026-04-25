@@ -28,6 +28,7 @@ const posts = (await getCollection("blog"))
           pubDate={post.data.pubDate}
           category={post.data.category}
           image={post.data.image}
+          brandGlassMark={post.data.brandGlassMark}
         />
       ))}
     </section>

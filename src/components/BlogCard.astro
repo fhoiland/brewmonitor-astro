@@ -1,5 +1,6 @@
 ---
 import { withBase } from "../utils/paths";
+import GlassLogoMark from "./GlassLogoMark.astro";
 
 interface Props {
   href: string;
@@ -8,9 +9,10 @@ interface Props {
   pubDate: Date;
   category?: string;
   image?: string;
+  brandGlassMark?: boolean;
 }
 
-const { href, title, summary, pubDate, category = "Bryggelogg", image } = Astro.props;
+const { href, title, summary, pubDate, category = "Bryggelogg", image, brandGlassMark = false } = Astro.props;
 const actualHref = withBase(href);
 const imageSrc = image ? withBase(image) : undefined;
 
@@ -39,6 +41,9 @@ const formattedDate = pubDate.toLocaleDateString("nb-NO", {
       </div>
     )}
     {imageSrc ? <div class="absolute inset-0 bg-gradient-to-t from-brew-dark via-brew-dark/20 to-transparent" /> : null}
+    {imageSrc && brandGlassMark ? (
+      <GlassLogoMark className="absolute left-[68%] top-[57%] h-12 w-9 -translate-x-1/2 -translate-y-1/2 opacity-70 sm:h-14 sm:w-10" />
+    ) : null}
     {imageSrc ? <div class="absolute left-5 top-5"><span class="section-kicker">{category}</span></div> : null}
   </div>
 

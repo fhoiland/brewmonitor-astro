@@ -3,8 +3,9 @@ title: "Bunker Brew Jærsk Helles - lys og lettdrikkelig lager med Jærmalt"
 summary: "Første forsøk på en egenkomponert Bunker Brew-helles: en lys, ren og lettdrikkelig lager med Jærmalt pilsner, Vienna og hvete, bygget rundt enkel maltprofil, kontrollert gjæring og klart øl."
 pubDate: 2026-04-25
 category: "Brygging"
-image: "/images/blog/jaersk-helles/cover.svg"
+image: "/images/blog/jaersk-helles/cover-photo.png"
 imageCaption: "Første brygg på en helles-oppskrift vi har satt sammen selv - lyst, ryddig og bevisst enkelt."
+brandGlassMark: true
 featured: false
 published: true
 tags:
@@ -17,8 +18,6 @@ tags:
   - "corneliusfat"
   - "cold crash"
 ---
-
-# Bunker Brew Jærsk Helles - lys og lettdrikkelig lager med Jærmalt
 
 Dette er en ren og praktisk oppskrift på et lyst lagerøl i helles-retning. Målet er et øl som er lyst, friskt, lettdrikkelig og balansert, uten at humlen eller maltsødmen tar over.
 
@@ -95,9 +94,9 @@ Whirlfloc brukes mot slutten av kok for å hjelpe proteiner og partikler å flok
 | CO2 | Til overføring og karbonering | Etter behov |
 | Rengjøring | Egnet vask og desinfeksjon | Etter behov |
 
-# Bryggeprosess
+## Bryggeprosess
 
-## 1. Vannmengder
+### 1. Vannmengder
 
 Vannmengdene må justeres etter eget bryggeutstyr, men dette er et godt startpunkt for ca. 25 liter til gjæring:
 
@@ -111,7 +110,7 @@ Vannmengdene må justeres etter eget bryggeutstyr, men dette er et godt startpun
 
 Det viktigste er ikke å treffe disse tallene blindt, men å lære hvordan eget system oppfører seg. Noter volum før kok, etter kok og inn i gjæringskar.
 
-## 2. Mesking
+### 2. Mesking
 
 | Meskesteg | Temperatur | Tid | Hensikt |
 |---|---:|---:|---|
@@ -123,7 +122,7 @@ Hovedsteget på 64 °C er valgt for å få et lettdrikkelig og godt utgjæret ø
 
 Ikke jag høyest mulig mesketemperatur her. For høy mesketemperatur kan gi et søtere og tyngre øl enn ønsket.
 
-## 3. Skylling
+### 3. Skylling
 
 Skyll rolig med vann på ca. 75-78 °C.
 
@@ -131,7 +130,7 @@ Stopp skylling når ønsket pre-boil-volum er nådd, eller dersom avrenningen be
 
 Målet er å få en ren og balansert vørter, ikke å presse ut absolutt alt fra malten.
 
-## 4. Kok
+### 4. Kok
 
 Koketid: **90 minutter**
 
@@ -149,13 +148,13 @@ Ved bruk av mye pilsnermalt er 90 minutter kok et trygt valg. Det gir en mer rob
 
 Etter kok kan det lages whirlpool. La vørteren stå 15-20 minutter før kjøling, slik at partikler får samlet seg bedre.
 
-## 5. Kjøling
+### 5. Kjøling
 
 Kjøl vørteren ned til **10-11 °C** før gjær tilsettes.
 
 For lagerøl er pitch-temperaturen viktig. Å tilsette lagergjær varmt og "la den kjøle seg ned etterpå" er dårligere prosesskontroll. Det kan fungere, men det er ikke den beste måten å lage et rent og ryddig lagerøl på.
 
-## 6. Gjæring
+### 6. Gjæring
 
 | Fase | Temperatur | Varighet | Kommentar |
 |---|---:|---:|---|
@@ -169,7 +168,7 @@ Diacetyl-rest er en billig forsikring. Når gjæringen nærmer seg ferdig, økes
 
 Etterpå kjøles ølet ned til 0-2 °C for cold crash og lagring.
 
-## 7. Overføring til Corneliusfat
+### 7. Overføring til Corneliusfat
 
 For et lyst lagerøl er oksygen fienden. Rolig og lukket overføring er derfor viktig.
 
@@ -183,7 +182,7 @@ Gjør slik:
 
 Ikke la ølet plaske. Ikke stress overføringen. Lys lager tåler lite slurv med oksygen.
 
-## 8. Karbonering
+### 8. Karbonering
 
 | Temperatur | Trykk | Tid | Resultat |
 |---:|---:|---:|---|
@@ -191,7 +190,7 @@ Ikke la ølet plaske. Ikke stress overføringen. Lys lager tåler lite slurv med
 
 For et lyst og lettdrikkelig lagerøl bør karboneringen være frisk, men ikke ekstrem. For mye kullsyre kan gjøre ølet skarpere og mindre balansert.
 
-# Kontrollpunkter
+## Kontrollpunkter
 
 For å kunne forbedre oppskriften senere bør disse punktene noteres:
 
@@ -211,13 +210,13 @@ Hvis ølet skal forbedres senere, bør kun én ting endres om gangen. Enten litt
 
 Det gjelder ekstra mye her, siden dette er første brygg på en oppskrift vi har satt sammen selv. Målet er ikke bare å treffe godt på første forsøk, men å lære nok av dette brygget til å vite hva som eventuelt bør justeres i neste runde.
 
-# Forventet resultat
+## Forventet resultat
 
 Ferdig øl bør bli lyst gyllent, rent og lettdrikkelig med mild maltkarakter, lett brødskorpe, moderat bitterhet og et forsiktig klassisk humlepreg.
 
 Det skal ikke være tungt, søtt eller kraftig humlet. Dette er et øl som handler om balanse og prosesskontroll.
 
-# Kortversjon av oppskriften
+## Kortversjon av oppskriften
 
 ```text
 Batch: 25 liter
