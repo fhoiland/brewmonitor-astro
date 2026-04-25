@@ -3,7 +3,9 @@ import { getCollection } from "astro:content";
 import BlogCard from "../../components/BlogCard.astro";
 import Layout from "../../components/Layout.astro";
 
-const posts = (await getCollection("blog")).sort(
+const posts = (await getCollection("blog"))
+  .filter((post) => post.data.published !== false)
+  .sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
 ---

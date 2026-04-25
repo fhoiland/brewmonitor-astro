@@ -4,7 +4,7 @@ import Layout from "../../components/Layout.astro";
 import { withBase } from "../../utils/paths";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = (await getCollection("blog")).filter((post) => post.data.published !== false);
 
   return posts.map((post) => ({
     params: { slug: post.slug },

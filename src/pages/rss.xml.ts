@@ -4,7 +4,9 @@ import { site } from "../data/site";
 import { withBase } from "../utils/paths";
 
 export async function GET(context) {
-  const posts = (await getCollection("blog")).sort(
+  const posts = (await getCollection("blog"))
+    .filter((post) => post.data.published !== false)
+    .sort(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
   );
 

@@ -1,126 +1,31 @@
 ---
 import { getCollection } from "astro:content";
-import BrewStatusCards from "../components/BrewStatusCards.astro";
 import FeaturedPostCard from "../components/FeaturedPostCard.astro";
 import Layout from "../components/Layout.astro";
-import StatsGrid from "../components/StatsGrid.astro";
-import { homeHighlights, processSteps, site } from "../data/site";
-import { withBase } from "../utils/paths";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
-);
+const posts = (await getCollection("blog"))
+  .filter((post) => post.data.published !== false)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
 const featuredPosts = posts.slice(0, 2);
 const morePosts = posts.slice(2, 5);
-const blogHref = withBase("/blog");
-const aboutHref = withBase("/about");
 ---
 
 <Layout title="Bunker Brew" description="Underground beer. Built simple. Blogg med batcher, bryggedager og notater.">
   <main id="main-content" tabindex="-1" class="container-shell py-8 sm:py-10">
-    <section class="hero-panel rounded-[2rem] px-6 py-8 sm:px-8 sm:py-10">
-      <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-        <div>
-          <span class="section-kicker">Bunker Brew</span>
-          <h1 class="mt-5 font-headline text-5xl font-bold leading-[0.94] text-brew-text sm:text-6xl lg:text-7xl">
-            Ølblogg fra et bomberom med mer nysgjerrighet enn vett.
-          </h1>
-          <p class="mt-5 max-w-2xl text-base leading-8 text-brew-text-muted">
-            {site.description}
-          </p>
-        </div>
-
-        <div class="glass-card rounded-[2rem] p-6 sm:p-7">
-          <p class="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brew-amber">
-            Det vi holder på med
-          </p>
-          <div class="mt-5 grid gap-4">
-            {homeHighlights.map((item) => (
-              <div class="rounded-[1.4rem] border border-brew-border bg-white/[0.03] px-5 py-4">
-                <div class="flex items-center justify-between gap-3">
-                  <h2 class="font-headline text-2xl font-bold text-brew-text">{item.title}</h2>
-                  <span class="section-kicker">{item.meta}</span>
-                </div>
-                <p class="mt-3 text-sm leading-7 text-brew-text-muted">{item.body}</p>
-              </div>
-            ))}
-          </div>
-
-          <div class="mt-6 flex flex-wrap gap-4">
-            <a
-              href={blogHref}
-              class="inline-flex items-center justify-center rounded-full bg-brew-amber px-6 py-3 text-sm font-semibold text-brew-dark transition hover:bg-brew-amber-light"
-            >
-              Les blogginnlegg
-            </a>
-            <a
-              href={aboutHref}
-              class="inline-flex items-center justify-center rounded-full border border-brew-border bg-white/5 px-6 py-3 text-sm font-semibold text-brew-text transition hover:border-brew-amber/40 hover:text-brew-amber"
-            >
-              Mer om oss
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mt-10">
-      <StatsGrid />
-    </section>
-
-    <section class="mt-10">
-      <div class="mb-6 max-w-3xl">
-        <span class="section-kicker">Status i bryggeriet</span>
-        <h2 class="mt-4 font-headline text-4xl font-bold text-brew-text sm:text-5xl">
-          Små signaler fra kjeler, gjæring og det vi lærer underveis.
-        </h2>
-      </div>
-      <BrewStatusCards />
-    </section>
-
-    <section class="mt-10">
-      <div class="mb-6 max-w-3xl">
-        <span class="section-kicker">Prosess</span>
-        <h2 class="mt-4 font-headline text-4xl font-bold text-brew-text sm:text-5xl">
-          Fra bryggedag til første smaksprøve.
-        </h2>
-      </div>
-
-      <div class="grid gap-5 md:grid-cols-3">
-        {processSteps.map((step, index) => (
-          <article class="glass-card rounded-[1.75rem] p-6">
-            <div class="flex items-center gap-4">
-              <span class="flex h-11 w-11 items-center justify-center rounded-full border border-brew-border bg-brew-amber-soft font-headline text-xl font-bold text-brew-amber">
-                {index + 1}
-              </span>
-              <h3 class="font-headline text-2xl font-bold text-brew-text">{step.title}</h3>
-            </div>
-            <p class="mt-4 text-sm leading-7 text-brew-text-muted">{step.text}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="mt-12">
-      <div class="mb-6 max-w-3xl">
-        <span class="section-kicker">Siste innlegg</span>
-        <h2 class="mt-4 font-headline text-4xl font-bold text-brew-text sm:text-5xl">
-          Batcher, notater og ting vi skulle ønske vi skjønte litt tidligere.
-        </h2>
-      </div>
-
+    <section>
       <div class="grid gap-10 md:grid-cols-2">
-      {featuredPosts.map((post) => (
-        <FeaturedPostCard
-          href={`/blog/${post.slug}/`}
-          title={post.data.title}
-          summary={post.data.summary}
-          pubDate={post.data.pubDate}
-          category={post.data.category}
-          image={post.data.image}
-          aspect="video"
-        />
-      ))}
+        {featuredPosts.map((post) => (
+          <FeaturedPostCard
+            href={`/blog/${post.slug}/`}
+            title={post.data.title}
+            summary={post.data.summary}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            image={post.data.image}
+            aspect="video"
+          />
+        ))}
       </div>
     </section>
 
