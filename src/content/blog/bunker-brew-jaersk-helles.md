@@ -3,9 +3,8 @@ title: "Bunker Brew Jærsk Helles - lys og lettdrikkelig lager med Jærmalt"
 summary: "Første forsøk på en egenkomponert Bunker Brew-helles: en lys, ren og lettdrikkelig lager med Jærmalt pilsner, Vienna og hvete, bygget rundt enkel maltprofil, kontrollert gjæring og klart øl."
 pubDate: 2026-04-25
 category: "Brygging"
-image: "/images/blog/jaersk-helles/cover-photo.png"
+image: "/images/blog/jaersk-helles/cover-branded.png"
 imageCaption: "Første brygg på en helles-oppskrift vi har satt sammen selv - lyst, ryddig og bevisst enkelt."
-brandGlassMark: true
 featured: false
 published: true
 tags:

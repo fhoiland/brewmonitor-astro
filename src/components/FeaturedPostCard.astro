@@ -1,6 +1,5 @@
 ---
 import { withBase } from "../utils/paths";
-import GlassLogoMark from "./GlassLogoMark.astro";
 
 interface Props {
   href: string;
@@ -10,10 +9,9 @@ interface Props {
   category?: string;
   image?: string;
   aspect?: "video" | "square";
-  brandGlassMark?: boolean;
 }
 
-const { href, title, summary, pubDate, category = "Bryggelogg", image, aspect = "video", brandGlassMark = false } = Astro.props;
+const { href, title, summary, pubDate, category = "Bryggelogg", image, aspect = "video" } = Astro.props;
 const actualHref = withBase(href);
 const imageSrc = image ? withBase(image) : undefined;
 
@@ -40,9 +38,6 @@ const aspectClass = aspect === "square" ? "aspect-square" : "aspect-video";
         <div class="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(209,154,41,0.26),_transparent_35%),linear-gradient(180deg,rgba(20,28,43,0.85),rgba(10,15,23,1))]" />
       )}
       <div class="absolute inset-0 bg-gradient-to-t from-brew-dark via-brew-dark/10 to-transparent" />
-      {imageSrc && brandGlassMark ? (
-        <GlassLogoMark className="absolute left-[68%] top-[56%] h-12 w-9 -translate-x-1/2 -translate-y-1/2 opacity-70 sm:h-16 sm:w-12" />
-      ) : null}
     </a>
   </div>
 

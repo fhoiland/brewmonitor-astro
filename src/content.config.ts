@@ -9,7 +9,6 @@ const blog = defineCollection({
     category: z.string().default("Bryggelogg"),
     image: z.string().optional(),
     imageCaption: z.string().optional(),
-    brandGlassMark: z.boolean().default(false),
     featured: z.boolean().default(false),
     published: z.boolean().default(true),
     tags: z.array(z.string()).default([]),
