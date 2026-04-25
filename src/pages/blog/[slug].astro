@@ -26,11 +26,11 @@ const formattedDate = post.data.pubDate.toLocaleDateString("nb-NO", {
     <article class="mx-auto max-w-3xl">
       <div class="hero-panel rounded-[2rem] px-6 py-8 sm:px-8">
         <span class="section-kicker">{post.data.category}</span>
-        <h1 class="mt-5 font-headline text-4xl font-bold leading-tight text-brew-text sm:text-5xl">
+        <h1 class="mt-5 font-headline normal-case text-[2.5rem] font-bold leading-[1.02] text-brew-text sm:text-[3.35rem]">
           {post.data.title}
         </h1>
         <p class="mt-4 text-sm text-brew-text-muted">{formattedDate}</p>
-        <p class="mt-4 max-w-2xl text-base leading-8 text-brew-text-muted">{post.data.summary}</p>
+        <p class="mt-4 max-w-3xl text-[1.02rem] leading-8 text-brew-text-muted">{post.data.summary}</p>
       </div>
 
       {post.data.image ? (

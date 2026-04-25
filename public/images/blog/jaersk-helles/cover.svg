@@ -1,31 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
-  <rect width="1600" height="900" fill="#0D1118"/>
-  <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="320" cy="230" r="170" fill="#141C2B" stroke="#D19A29" stroke-width="4"/>
-  <circle cx="320" cy="230" r="96" fill="#D19A29" fill-opacity=".12"/>
-  <path d="M270 185h100M250 230h140M268 275h104" stroke="#D19A29" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="1180" cy="250" r="150" fill="#141C2B" stroke="#D19A29" stroke-width="4"/>
-  <path d="M1128 150h96l-16 215c-2 19-17 34-37 34h-6c-20 0-35-15-37-34l-6-84" stroke="#E7E5E1" stroke-width="10" stroke-linejoin="round"/>
-  <path d="M1128 150h96" stroke="#E7E5E1" stroke-width="10" stroke-linecap="round"/>
-  <path d="M1145 236c17-20 28-18 46-4 18 15 32 12 39-1" stroke="#D19A29" stroke-width="8" stroke-linecap="round"/>
-  <rect x="160" y="460" width="1280" height="260" rx="34" fill="#141C2B" stroke="#D19A29" stroke-width="3"/>
-  <rect x="210" y="520" width="400" height="124" rx="24" fill="#D19A29" fill-opacity=".1" stroke="#D19A29" stroke-opacity=".4" stroke-width="2"/>
-  <rect x="660" y="520" width="280" height="124" rx="24" fill="#E7E5E1" fill-opacity=".03" stroke="#D19A29" stroke-opacity=".22" stroke-width="2"/>
-  <rect x="980" y="520" width="210" height="124" rx="24" fill="#E7E5E1" fill-opacity=".03" stroke="#D19A29" stroke-opacity=".22" stroke-width="2"/>
-  <rect x="1218" y="520" width="170" height="124" rx="24" fill="#E7E5E1" fill-opacity=".03" stroke="#D19A29" stroke-opacity=".22" stroke-width="2"/>
-  <text x="170" y="120" fill="#D19A29" font-size="28" font-family="Inter, Arial, sans-serif" letter-spacing="4">BRYGGING</text>
-  <text x="206" y="575" fill="#E7E5E1" font-size="74" font-family="Oswald, Arial Narrow, sans-serif">JÆRSK HELLES</text>
-  <text x="210" y="625" fill="#E7E5E1" fill-opacity=".72" font-size="28" font-family="Inter, Arial, sans-serif">Første forsøk på vår egen lyse lageroppskrift med Jærmalt.</text>
-  <text x="710" y="570" fill="#D19A29" font-size="22" font-family="Inter, Arial, sans-serif" letter-spacing="3">MALT</text>
-  <text x="708" y="618" fill="#E7E5E1" font-size="30" font-family="Oswald, Arial Narrow, sans-serif">PILSNER / VIENNA / HVETE</text>
-  <text x="1028" y="570" fill="#D19A29" font-size="22" font-family="Inter, Arial, sans-serif" letter-spacing="3">GJÆRING</text>
-  <text x="1026" y="618" fill="#E7E5E1" font-size="30" font-family="Oswald, Arial Narrow, sans-serif">10-11 °C</text>
-  <text x="1260" y="570" fill="#D19A29" font-size="22" font-family="Inter, Arial, sans-serif" letter-spacing="3">STIL</text>
-  <text x="1253" y="618" fill="#E7E5E1" font-size="30" font-family="Oswald, Arial Narrow, sans-serif">HELLes</text>
+  <image href="./cover-photo.png" width="1600" height="900" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+
+  <g opacity=".6" filter="url(#logo-shadow)" transform="translate(1018 350) scale(4.35)">
+    <path
+      d="M4 32V12.5C4 6.7 8.7 2 14.5 2H15.5C21.3 2 26 6.7 26 12.5V32"
+      stroke="#F6F1E8"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M15 8V29"
+      stroke="#F6F1E8"
+      stroke-width="2.4"
+      stroke-linecap="round"
+    />
+    <path d="M15 10.5 10.6 8.2V12.1L15 14.2V10.5Z" fill="#F6F1E8"/>
+    <path d="M15 16.2 10.2 13.8V17.9L15 20.1V16.2Z" fill="#F6F1E8"/>
+    <path d="M15 22 10.6 19.8V23.7L15 25.8V22Z" fill="#F6F1E8"/>
+    <path d="M15 10.5 19.4 8.2V12.1L15 14.2V10.5Z" fill="#F6F1E8"/>
+    <path d="M15 16.2 19.8 13.8V17.9L15 20.1V16.2Z" fill="#F6F1E8"/>
+    <path d="M15 22 19.4 19.8V23.7L15 25.8V22Z" fill="#F6F1E8"/>
+  </g>
+
   <defs>
-    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#101521"/>
-      <stop offset="1" stop-color="#0A0F17"/>
+    <linearGradient id="vignette" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1118" stop-opacity=".12"/>
+      <stop offset=".52" stop-color="#0D1118" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0D1118" stop-opacity=".22"/>
     </linearGradient>
+    <filter id="logo-shadow" x="1000" y="340" width="150" height="180" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0D1118" flood-opacity=".28"/>
+    </filter>
   </defs>
 </svg>
