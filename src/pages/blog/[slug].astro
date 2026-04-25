@@ -22,7 +22,7 @@ const formattedDate = post.data.pubDate.toLocaleDateString("nb-NO", {
 ---
 
 <Layout title={`${post.data.title} | Bunker Brew`} description={post.data.summary}>
-  <main class="container-shell py-8 sm:py-10">
+  <main id="main-content" tabindex="-1" class="container-shell py-8 sm:py-10">
     <article class="mx-auto max-w-3xl">
       <div class="hero-panel rounded-[2rem] px-6 py-8 sm:px-8">
         <span class="section-kicker">{post.data.category}</span>

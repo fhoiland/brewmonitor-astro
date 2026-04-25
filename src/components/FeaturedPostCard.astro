@@ -25,7 +25,7 @@ const aspectClass = aspect === "square" ? "aspect-square" : "aspect-video";
 ---
 
 <article class="group cursor-pointer">
-  <div class:list={["relative overflow-hidden rounded-[1.4rem] border border-brew-border bg-white/5 transition duration-300 hover:-translate-y-1 hover:border-brew-amber/40", aspectClass]}>
+  <div class:list={["relative overflow-hidden rounded-[1.4rem] border border-brew-border bg-white/5 transition duration-300 hover:-translate-y-1 hover:border-brew-amber/40 focus-within:-translate-y-1 focus-within:border-brew-amber/40", aspectClass]}>
     <a href={actualHref}>
       {imageSrc ? (
         <img
@@ -47,7 +47,7 @@ const aspectClass = aspect === "square" ? "aspect-square" : "aspect-video";
     </span>
     <h2 class="mt-2 font-headline text-[1.7rem] font-semibold leading-[1.05] text-brew-text sm:text-[1.95rem]">
       <a href={actualHref}>
-        <span class="bg-[linear-gradient(to_right,rgba(209,154,41,0.24),rgba(235,180,88,0.16))] bg-[length:0px_12px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_12px]">
+        <span class="bg-[linear-gradient(to_right,rgba(209,154,41,0.24),rgba(235,180,88,0.16))] bg-[length:0px_12px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_12px] group-focus-within:bg-[length:100%_12px]">
           {title}
         </span>
       </a>

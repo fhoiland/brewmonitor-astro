@@ -15,6 +15,7 @@ const currentPath = Astro.url.pathname;
 const homeHref = withBase("/");
 const currentYear = new Date().getFullYear();
 const footerGreeting = "Hilsen oss i Bunker Brew - vi kaller det forskning sa lenge det skummer.";
+const rssFeedHref = Astro.site ? new URL(withBase("/rss.xml"), Astro.site).toString() : withBase("/rss.xml");
 ---
 
 <!doctype html>
@@ -26,10 +27,13 @@ const footerGreeting = "Hilsen oss i Bunker Brew - vi kaller det forskning sa le
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
     <link rel="alternate icon" type="image/png" href={withBase("/favicon.png")} />
+    <link rel="alternate" type="application/rss+xml" title={`${site.name} RSS`} href={rssFeedHref} />
   </head>
   <body>
     <div class="page-shell min-h-screen text-brew-text">
-      <nav class="sticky top-0 z-50 border-b border-brew-border bg-brew-dark/70 backdrop-blur-xl">
+      <a href="#main-content" class="skip-link">Hopp til innhold</a>
+
+      <nav aria-label="Hovednavigasjon" class="sticky top-0 z-50 border-b border-brew-border bg-brew-dark/70 backdrop-blur-xl">
         <div class="container-shell py-4">
           <div class="flex items-center justify-between gap-4">
             <a href={homeHref} class="flex items-center gap-4">

@@ -35,6 +35,48 @@ body {
   font-family: var(--font-sans);
 }
 
+a,
+button,
+input,
+select,
+textarea,
+summary,
+[tabindex]:not([tabindex="-1"]) {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid var(--brew-amber-light);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(209, 154, 41, 0.16);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-140%);
+  border-radius: 9999px;
+  border: 1px solid var(--brew-border);
+  background: var(--brew-card-strong);
+  padding: 0.8rem 1rem;
+  color: var(--brew-text);
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
 ::selection {
   background: hsla(35 95% 59% / 0.32);
   color: var(--brew-text);
@@ -134,4 +176,18 @@ body {
 
 .prose-brew a {
   color: var(--brew-amber-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
