@@ -2,7 +2,12 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
-const base = "/brewmonitor-astro";
+const base = "/";
+
+function withBasePath(path) {
+  const normalizedBase = base === "/" ? "" : base.replace(/\/$/, "");
+  return `${normalizedBase}${path}`;
+}
 
 function prefixRootImageUrls() {
   return (tree) => {
@@ -12,7 +17,7 @@ function prefixRootImageUrls() {
       }
 
       if (node.type === "image" && typeof node.url === "string" && node.url.startsWith("/images/")) {
-        node.url = `${base}${node.url}`;
+        node.url = withBasePath(node.url);
       }
 
       if (Array.isArray(node.children)) {
@@ -25,7 +30,7 @@ function prefixRootImageUrls() {
 }
 
 export default defineConfig({
-  site: "https://fhoiland.github.io",
+  site: "https://bunkerbrew.no",
   base,
   integrations: [mdx(), sitemap()],
   markdown: {
